@@ -15,13 +15,16 @@
     
 """
 
-questions_and_answers = {}
+questions_and_answers = {"Как дела": "Хорошо!", "Что делаешь?": "Программирую", "На Python?": "Ага", 
+                          "А долго еще?": "Незнаю, всё зависит от программиста"}
 
 def ask_user(answers_dict):
-    """
-    Замените pass на ваш код
-    """
-    pass
-    
+    while True: 
+        answers_dict = input('Задай вопрос кожаный! ')
+        if answers_dict in questions_and_answers.keys():
+            print(questions_and_answers[answers_dict])
+            break
+        else:
+            continue
 if __name__ == "__main__":
     ask_user(questions_and_answers)
