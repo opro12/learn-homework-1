@@ -10,11 +10,18 @@
 """
 
 
+from cmath import phase
+
+
 def hello_user():
-    """
-    Замените pass на ваш код
-    """
-    pass
+    while True:
+        phrase = input('Как дела? ')
+        if phrase == 'Хорошо':
+          break
+        else:
+          continue
+          #print('Неправильный ответ')
+    return phrase  
 
     
 if __name__ == "__main__":
