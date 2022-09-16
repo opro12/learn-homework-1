@@ -16,22 +16,20 @@
 """
 
 def string_checking(string1, string2):
-    #string1 = str(string1)
-    #string2 = str(string2)
-    if string1 != str(string1) or string2 != str(string2):
+    if type(string1) != str or type(string2) != str:
       return '0'
-    if str(string1) == str(string2):
+    if string1 == string2:
       return '1'
-    if string1 != string2 and len(string1) > len(string2):
+    if len(string1) > len(string2):
       return '2'
-    if string1 != string2 and len(string1) < len(string2):
+    if string2 == 'learn':
       return '3'
 
 temp_var = int(4)
 print(string_checking('temp_var', temp_var))
 print(string_checking('test', 'test'))
 print(string_checking('testtest', 'test'))
-print(string_checking('test', 'testtest'))
+print(string_checking('test', 'learn'))
         
 if __name__ == "__main__":
     string_checking()
