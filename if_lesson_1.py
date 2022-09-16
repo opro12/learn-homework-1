@@ -15,24 +15,18 @@
 """
 
 def age_verification(age):
-    """
-    Эта функция вызывается автоматически при запуске скрипта в консоли
-    В ней надо заменить pass на ваш код
-    """
-    age = int(age)
     if age >= 0 and age < 6:
       return 'Детский сад'
     if age >= 6 and age < 17:
       return 'Школа'
     if age >= 17 and age < 25:
       return 'ВУЗ'
-    else:
-      return 'Работа'
+    return 'Работа'
 
 
 
 if __name__ == "__main__":
-    age = int(input('Введите возраст:'))
+    age = int(input('Введите возраст: '))
     age_entry = age_verification(age)
     print(age_entry)
     
