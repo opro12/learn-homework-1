@@ -15,12 +15,23 @@
 
 """
 
-def main():
-    """
-    Эта функция вызывается автоматически при запуске скрипта в консоли
-    В ней надо заменить pass на ваш код
-    """
-    pass
-    
+def string_checking(string1, string2):
+    #string1 = str(string1)
+    #string2 = str(string2)
+    if string1 != str(string1) or string2 != str(string2):
+      return '0'
+    if str(string1) == str(string2):
+      return '1'
+    if string1 != string2 and len(string1) > len(string2):
+      return '2'
+    if string1 != string2 and len(string1) < len(string2):
+      return '3'
+
+temp_var = int(4)
+print(string_checking('temp_var', temp_var))
+print(string_checking('test', 'test'))
+print(string_checking('testtest', 'test'))
+print(string_checking('test', 'testtest'))
+        
 if __name__ == "__main__":
-    main()
+    string_checking()
