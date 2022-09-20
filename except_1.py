@@ -11,17 +11,12 @@
 """
 
 def hello_user():
-  try:
-      while True:
-          phrase = input('Как дела? ')
-          if phrase == 'Хорошо':
-              break
-          else:
-            continue
-  except KeyboardInterrupt:
-      print('Пока')
-          #print('Неправильный ответ')
-  return phrase
+  while input('Как дела? ') != 'Хорошо':
+      continue
+
     
 if __name__ == "__main__":
-    hello_user()
+  try:
+      hello_user()
+  except KeyboardInterrupt:
+      print('Пока')
