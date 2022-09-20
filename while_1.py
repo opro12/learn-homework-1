@@ -9,19 +9,9 @@
    
 """
 
-
-from cmath import phase
-
-
 def hello_user():
-    while True:
-        phrase = input('Как дела? ')
-        if phrase == 'Хорошо':
-          break
-        else:
-          continue
-          #print('Неправильный ответ')
-    return phrase  
+  while input('Как дела? ') != 'Хорошо':
+      continue
 
     
 if __name__ == "__main__":
