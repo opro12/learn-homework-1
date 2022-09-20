@@ -15,16 +15,19 @@
     
 """
 
-questions_and_answers = {"Как дела": "Хорошо!", "Что делаешь?": "Программирую", "На Python?": "Ага", 
+answers = {"Как дела": "Хорошо!", "Что делаешь?": "Программирую", "На Python?": "Ага", 
                           "А долго еще?": "Незнаю, всё зависит от программиста"}
 
-def ask_user(answers_dict):
+
+def ask_user(question):
     while True: 
-        answers_dict = input('Задай вопрос кожаный! ')
-        if answers_dict in questions_and_answers.keys():
-            print(questions_and_answers[answers_dict])
+        question = input('Задай вопрос кожаный! ')
+        if question in answers:
+            print(answers[question])
             break
         else:
             continue
+
+
 if __name__ == "__main__":
-    ask_user(questions_and_answers)
+    ask_user(answers)
